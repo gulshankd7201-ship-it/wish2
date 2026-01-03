@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+}
+
+.section p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+button {
+  padding: 14px 28px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #ff4d6d;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Photo Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  perspective: 1000px;
+  height: 280px;
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.front {
+  background-size: cover;
+  background-position: center;
+}
+
+.back {
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: 3enter;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Video */
+video {
+  max-width: 85%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 15px;
+}
+
+/* Final */
+.final h1 {
+  font-size: 2.5rem;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
